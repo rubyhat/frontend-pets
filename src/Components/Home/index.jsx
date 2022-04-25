@@ -1,9 +1,20 @@
-import styles from "./home.module.scss";
-import classNames from "classnames/bind";
 import { Link } from "react-router-dom";
 
 const Home = () => {
-  const cx = classNames.bind(styles);
+  const links = [
+    {
+      id: 1,
+      title: "Snake Game",
+      text: 'Игра "Змейка", реализованная при помощи React.',
+      link: "/snake-game",
+    },
+    {
+      id: 2,
+      title: "GitHub Search User",
+      text: "Поиск юзера на GitHub",
+      link: "/github-find-user",
+    },
+  ];
   return (
     <>
       <div className="grid grid-cols-3 mb-3">
@@ -14,14 +25,17 @@ const Home = () => {
           </p>
         </div>
       </div>
-      <div className={cx("grid grid-cols-4 gap-2")}>
-        <Link
-          className="transition hover:bg-rose-300 hover:text-white border-2 border-rose-300 rounded p-2"
-          to="/snake-game"
-        >
-          <h6 className="title font-bold">Snake Game</h6>
-          <p className="desc">Игра "Змейка", реализованная при помощи React.</p>
-        </Link>
+      <div className="grid grid-cols-4 gap-2">
+        {links.map((link) => (
+          <Link
+            key={link.id}
+            className="text-zinc-700 transition hover:bg-rose-300 hover:text-white border-2 border-rose-300 rounded p-2"
+            to={link.link}
+          >
+            <h6 className="title font-bold">{link.title}</h6>
+            <p className="text">{link.text}</p>
+          </Link>
+        ))}
       </div>
     </>
   );
