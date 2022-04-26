@@ -14,6 +14,12 @@ const Home = () => {
       text: "Поиск юзера на GitHub",
       link: "/github-find-user",
     },
+    {
+      id: 3,
+      title: "Drag & Drop like Trello",
+      text: "Drag & Drop используя React",
+      link: "/trello",
+    },
   ];
   return (
     <>
