@@ -1,0 +1,34 @@
+.boards {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 960px;
+}
+
+.board {
+  width: 100%;
+  min-height: 400px;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 2px solid var(--dark);
+  margin-right: 30px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.board__title {
+  font-size: 1.5rem;
+  text-align: center;
+  color: var(--dark);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.item {
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  border: 2px solid var(--coral);
+  margin-bottom: 0.5rem;
+  cursor: grab;
+}

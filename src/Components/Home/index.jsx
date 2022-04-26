@@ -18,7 +18,7 @@ const Home = () => {
       id: 3,
       title: "Drag & Drop like Trello",
       text: "Drag & Drop используя React",
-      link: "/trello",
+      link: "/drag-and-drop",
     },
   ];
   return (

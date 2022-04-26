@@ -4,7 +4,7 @@ import SnakeGame from "./Components/Snake";
 
 import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
 import GithubFindUser from "./Components/GithubFindUser";
-import Trello from "./Components/Trello";
+import DD from "./Components/DD";
 
 function App() {
   const createHistory = require("history").createBrowserHistory;
@@ -41,7 +41,7 @@ function App() {
                 path="/github-find-user"
                 element={<GithubFindUser />}
               />
-              <Route exact path="/trello" element={<Trello />} />
+              <Route exact path="/drag-and-drop" element={<DD />} />
             </Routes>
           </div>
         </main>
