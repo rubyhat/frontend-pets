@@ -116,7 +116,9 @@ const GithubFindUser = () => {
                 <p className="text-sm ">{data.bio}</p>
                 <hr className="my-1" />
                 <p className="text-base font-bold">Name: {data.name}</p>
-                <p className="text-base font-bold">Location: {data.location}</p>
+                <p className="text-base font-bold">
+                  Location: {data.location ? data.location : "Hidden"}
+                </p>
                 <p className="text-base font-bold">
                   Since: {data.created_at.slice(0, 10)}
                 </p>
