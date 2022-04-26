@@ -7,18 +7,28 @@ const Home = () => {
       title: "Snake Game",
       text: 'Игра "Змейка", реализованная при помощи React.',
       link: "/snake-game",
+      order: 2,
     },
     {
       id: 2,
       title: "GitHub Search User",
       text: "Поиск юзера на GitHub",
       link: "/github-find-user",
+      order: 3,
     },
     {
       id: 3,
       title: "Drag & Drop like Trello",
       text: "Drag & Drop используя React",
       link: "/drag-and-drop",
+      order: 4,
+    },
+    {
+      id: 4,
+      title: "Hello, Algorithms!",
+      text: "Что я знаю об алгоритмах",
+      link: "/algorithms",
+      order: 1,
     },
   ];
   return (
@@ -32,16 +42,18 @@ const Home = () => {
         </div>
       </div>
       <div className="grid grid-cols-4 gap-2">
-        {links.map((link) => (
-          <Link
-            key={link.id}
-            className="text-zinc-700 transition hover:bg-rose-300 hover:text-white border-2 border-rose-300 rounded p-2"
-            to={link.link}
-          >
-            <h6 className="title font-bold">{link.title}</h6>
-            <p className="text">{link.text}</p>
-          </Link>
-        ))}
+        {links
+          .sort((a, b) => a.order - b.order)
+          .map((link) => (
+            <Link
+              key={link.id}
+              className="text-zinc-700 transition hover:bg-rose-300 hover:text-white border-2 border-rose-300 rounded p-2"
+              to={link.link}
+            >
+              <h6 className="title font-bold">{link.title}</h6>
+              <p className="text">{link.text}</p>
+            </Link>
+          ))}
       </div>
     </>
   );

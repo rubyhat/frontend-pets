@@ -5,6 +5,7 @@ import SnakeGame from "./Components/Snake";
 import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
 import GithubFindUser from "./Components/GithubFindUser";
 import DD from "./Components/DD";
+import Algorithms from "./Components/Algorithms";
 
 function App() {
   const createHistory = require("history").createBrowserHistory;
@@ -35,6 +36,7 @@ function App() {
             <Routes>
               <Route exact path="*" element={<Home />} />
               <Route exact path="/" element={<Home />} />
+              <Route exact path="/algorithms" element={<Algorithms />} />
               <Route exact path="/snake-game" element={<SnakeGame />} />
               <Route
                 exact
