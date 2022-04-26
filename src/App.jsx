@@ -18,7 +18,7 @@ function App() {
             <div className="flex items-center">
               <Link
                 to="/"
-                className="mr-3 transition text-lg text-rose-500 hover:text-rose-400 font-bold"
+                className="mr-3 transition text-lg text-rose-700 hover:text-rose-600 font-bold"
               >
                 Rubyhat
               </Link>
@@ -50,7 +50,7 @@ function App() {
         <footer className="footer py-3 border-t-2 border-zinc-200">
           <div className="container mx-auto px-4">
             <Link
-              className="transition text-base text-rose-500 hover:text-rose-400 font-bold"
+              className="transition text-base text-rose-700 hover:text-rose-600 font-bold"
               to="https://github.com/rubyhat"
             >
               Rubyhat 2022.
