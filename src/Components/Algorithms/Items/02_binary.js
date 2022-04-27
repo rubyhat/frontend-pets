@@ -28,10 +28,28 @@ const binarySearch = () => {
 
     return position;
   };
+
+  const recursionSearch = (array, number, start, end) => {
+    let middle = Math.floor((start + end) / 2);
+    count += 1;
+
+    if (array[middle] === number) return middle;
+
+    if (array[middle] > number) {
+      return recursionSearch(array, number, start, middle - 1);
+    } else {
+      return recursionSearch(array, number, middle + 1, end);
+    }
+  };
+
   console.log("2. Бинарный поиск");
   console.log("Массив: ", array);
   console.log("Искомое число: ", 13);
-  console.log("Индекс в массиве: ", search(array, 13));
+  // console.log("Индекс в массиве: ", search(array, 13));
+  console.log(
+    "Индекс в массиве: ",
+    recursionSearch(array, 13, 0, array.length)
+  );
   console.log("Количество иттераций: ", count);
   console.log("\n");
 };

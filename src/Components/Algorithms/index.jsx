@@ -3,13 +3,15 @@ import linearSearch from "./Items/01_linear";
 import binarySearch from "./Items/02_binary";
 import selectionSort from "./Items/03_selection_sort";
 import bubbleSort from "./Items/04_bubble_sort";
+import quickSort from "./Items/05_quick_sort";
 import recursion from "./Items/06_recursion";
 
 const Algorithms = () => {
   // linearSearch();
-  // binarySearch();
+  binarySearch();
   // selectionSort();
   // bubbleSort();
+  quickSort();
   recursion();
   return (
     <div className="algorithms">
