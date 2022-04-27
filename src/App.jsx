@@ -22,12 +22,14 @@ function App() {
               >
                 Rubyhat
               </Link>
-              <Link
+              <a
                 className="transition text-sm text-zinc-500 hover:text-zinc-400 underline underline-offset-1"
-                to="https://github.com/rubyhat"
+                href="https://github.com/rubyhat"
+                target="_blank"
+                rel="noreferrer"
               >
                 https://github.com/rubyhat
-              </Link>
+              </a>
             </div>
           </div>
         </header>

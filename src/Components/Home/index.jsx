@@ -18,7 +18,7 @@ const Home = () => {
     },
     {
       id: 3,
-      title: "Drag & Drop like Trello",
+      title: "Drag & Drop",
       text: "Drag & Drop используя React",
       link: "/drag-and-drop",
       order: 4,
@@ -47,7 +47,7 @@ const Home = () => {
           .map((link) => (
             <Link
               key={link.id}
-              className="text-zinc-700 transition hover:bg-rose-300 hover:text-white border-2 border-rose-300 rounded p-2"
+              className="text-zinc-700 transition hover:bg-rose-700 hover:text-white border-2 border-rose-700 rounded p-2"
               to={link.link}
             >
               <h6 className="title font-bold">{link.title}</h6>
