@@ -1,10 +1,12 @@
 import bigO from "./images/big-o.webp";
 import linearSearch from "./Items/01_linear";
 import binarySearch from "./Items/02_binary";
+import selectionSort from "./Items/03_selection_sort";
 
 const Algorithms = () => {
   linearSearch();
   binarySearch();
+  selectionSort();
   return (
     <div className="algorithms">
       <h1 className="text-3xl font-bold text-rose-700">Hello, algorithms!</h1>
