@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
 import GithubFindUser from "./Components/GithubFindUser";
 import DD from "./Components/DD";
 import Algorithms from "./Components/Algorithms";
+import JavaScript from "./Components/JavaScript";
 
 function App() {
   const createHistory = require("history").createBrowserHistory;
@@ -39,6 +40,7 @@ function App() {
               <Route exact path="*" element={<Home />} />
               <Route exact path="/" element={<Home />} />
               <Route exact path="/algorithms" element={<Algorithms />} />
+              <Route exact path="/javascript" element={<JavaScript />} />
               <Route exact path="/snake-game" element={<SnakeGame />} />
               <Route
                 exact
@@ -55,7 +57,7 @@ function App() {
               className="transition text-base text-rose-700 hover:text-rose-600 font-bold"
               to="https://github.com/rubyhat"
             >
-              Rubyhat 2022.
+              Rubyhat | 2022
             </Link>
           </div>
         </footer>

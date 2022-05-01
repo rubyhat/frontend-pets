@@ -7,21 +7,21 @@ const Home = () => {
       title: "Snake Game",
       text: 'Игра "Змейка", реализованная при помощи React.',
       link: "/snake-game",
-      order: 2,
+      order: 3,
     },
     {
       id: 2,
       title: "GitHub Search User",
       text: "Поиск юзера на GitHub",
       link: "/github-find-user",
-      order: 3,
+      order: 4,
     },
     {
       id: 3,
       title: "Drag & Drop",
       text: "Drag & Drop используя React",
       link: "/drag-and-drop",
-      order: 4,
+      order: 5,
     },
     {
       id: 4,
@@ -30,14 +30,21 @@ const Home = () => {
       link: "/algorithms",
       order: 1,
     },
+    {
+      id: 4,
+      title: "Hello, JavaScript!",
+      text: "Что я знаю о native JavaScript",
+      link: "/javascript",
+      order: 2,
+    },
   ];
   return (
     <>
-      <div className="grid grid-cols-3 mb-3">
+      <div className="grid grid-cols-2 mb-3">
         <div className="bg-blue-100 p-3 rounded">
           <p className="text-base text-zinc-700">
             Сборник небольших <strong>React Pet Projects</strong>, реализованных
-            в целях изучения и тестирования.
+            в целях изучения и тестирования, а также учебные конспекты.
           </p>
         </div>
       </div>
