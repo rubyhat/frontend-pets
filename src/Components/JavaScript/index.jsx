@@ -124,7 +124,11 @@ const JavaScript = () => {
           <h3 className="text-xl font-bold text-zinc-700">
             Higher-Order Function
           </h3>
-          <p className="text-base font-medium text-zinc-600"></p>
+          <p className="text-base font-medium text-zinc-600">
+            Функция которая принимает функцию как аргумент или возвращает
+            функцию в виде выходного значения. Например стандартные функции map,
+            filter, reduce являются функциями высшего порядка.
+          </p>
         </div>
       </div>
     </div>
