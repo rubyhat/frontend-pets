@@ -65,7 +65,7 @@ const Algorithms = () => {
           операция равна 1мс, то получаем:
           <div className="relative rounded-xl overflow-auto w-full md:w-2/4">
             <div className="shadow-sm overflow-hidden my-4">
-              <table className="border-collapse table-auto w-full text-sm">
+              <table className="dark:bg-slate-800 border-collapse table-auto w-full text-sm">
                 <thead>
                   <tr>
                     <th className="border-b dark:border-slate-600 font-medium p-4 pl-8 pt-0 pb-3 text-slate-400 dark:text-slate-200 text-left">
@@ -123,7 +123,7 @@ const Algorithms = () => {
           операция равна 1мс, то получаем:
           <div className="relative rounded-xl overflow-auto w-full md:w-2/4">
             <div className="shadow-sm overflow-hidden my-4">
-              <table className="border-collapse table-auto w-full text-sm">
+              <table className="dark:bg-slate-800 border-collapse table-auto w-full text-sm">
                 <thead>
                   <tr>
                     <th className="border-b dark:border-slate-600 font-medium p-4 pl-8 pt-0 pb-3 text-slate-400 dark:text-slate-200 text-left">
