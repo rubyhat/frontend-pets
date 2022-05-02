@@ -1,4 +1,6 @@
 const JavaScript = () => {
+  // callbacks & callbacks hell
+  // event loop
   return (
     <div className="javascript">
       <h1 className="text-3xl font-bold text-rose-700">Hello, JavaScript!</h1>
@@ -90,6 +92,39 @@ const JavaScript = () => {
               вычислением конечного результата.
             </p>
           </div>
+        </div>
+        <div className="py-3">
+          <h3 className="text-xl font-bold text-zinc-700">
+            Функциональное программирование
+          </h3>
+          <p className="text-base font-medium text-zinc-600">
+            Вкратце, это подход к программированию, при использовании которого
+            функции можно передавать другим функциям в качестве параметров и
+            использовать функции в качестве значений, возвращаемых другими
+            функциями.
+          </p>
+        </div>
+        <div className="py-3">
+          <h3 className="text-xl font-bold text-zinc-700">
+            First-Class Functions
+          </h3>
+          <p className="text-base font-medium text-zinc-600">
+            В JavaScript, как и во многих других языках функции являются
+            объектами. Технически, с функциями можно делать все то же, что и с
+            объектами, но не стоит это использовать. Если нужен объект, то
+            создаем объект.
+          </p>
+          <p className="text-base font-medium text-zinc-600 mt-2">
+            Функции можно передавать как параметры другим функциям, можно
+            назначать переменным, хранить их в массивах, именно поэтому функции
+            в js - это <strong>объекты первого класса.</strong>
+          </p>
+        </div>
+        <div className="py-3">
+          <h3 className="text-xl font-bold text-zinc-700">
+            Higher-Order Function
+          </h3>
+          <p className="text-base font-medium text-zinc-600"></p>
         </div>
       </div>
     </div>
