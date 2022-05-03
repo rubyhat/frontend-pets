@@ -284,6 +284,49 @@ const JavaScript = () => {
           когда назначение будет выполнено. Это говорит о том, что все
           необъявленные переменные это по факту глобальные переменные.
         </p>
+        <p className="text-base font-medium text-zinc-600 mt-2">
+          <strong>Function Declaration</strong> - такие функции полностью
+          поднимают вверх кода, поэтому мы можем вызвать их до того, как
+          объявили.
+        </p>
+        <p className="text-base font-medium text-zinc-600 mt-2">
+          <strong>Function Expression</strong> - такие функции не поднимаются,
+          если обратиться до их объявления и назначения как функции.
+        </p>
+      </div>
+      <div className="py-3">
+        <h3 className="text-xl font-bold text-zinc-700">
+          Жизненный цикл события (всплытие и погружение)
+        </h3>
+        <p className="text-base font-medium text-zinc-600">
+          Фаза погружения - фаза цели - фаза всплытия
+        </p>
+        <p className="text-base font-medium text-zinc-600 mt-2">
+          Погружение или перехват - триггер обработчиков при погружении события
+          до целевого элемента. Чтобы поймать событие на стадии погружения,
+          нужно использовать третий аргумент capture{" "}
+          <strong>{"{capture: true}"}</strong>
+        </p>
+        <p className="text-base font-medium text-zinc-600 mt-2">
+          Всплытие - это когда на элементе происходит событие, обработчики
+          сначала срабатывают на нём, потом на его родителе, затем выше и так
+          далее, вверх по цепочке предков.
+        </p>
+        <p className="text-base font-medium text-zinc-600 mt-2">
+          Самый глубокий элемент, который вызывает событие, называется целевым
+          элементом, и он доступен через <strong>event.target</strong>
+        </p>
+        <p className="text-base font-medium text-zinc-600 mt-2">
+          Остановить вспылтие возможно при помощи{" "}
+          <strong>
+            event.stopPropagation() и event.stopImmediatePropagation()
+          </strong>
+          , но не стоит этого делать без необходимости.
+        </p>
+        <p className="text-base font-medium text-zinc-600 mt-2">
+          Всплытие и погружение являются основой для «делегирования событий» –
+          очень мощного приёма обработки событий.
+        </p>
       </div>
     </div>
   );
