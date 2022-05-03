@@ -63,6 +63,28 @@ const JavaScript = () => {
         </div>
       </div>
       <div className="py-3">
+        <h3 className="text-xl font-bold text-zinc-700">Типы ошибок</h3>
+        <div className="text-base font-medium text-zinc-600">
+          <ul>
+            <li>
+              SyntaxError - синтаксическая ошибка, например лишняя скобка или
+              другой символ.
+            </li>
+            <li>
+              ReferenceError - ошибка, которая появляется при обращении к
+              сущности до ее объявления.
+            </li>
+            <li>
+              TypeError - ошибка типизации, появляется когда что-то используется
+              не верно, например: <strong>const x = 10; x();</strong>
+            </li>
+            <li>
+              LogicalError - логическая ошибка, ошибка не в коде, а в логике.
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div className="py-3">
         <h3 className="text-xl font-bold text-zinc-700">Чистая функция</h3>
         <div className="text-base font-medium text-zinc-600">
           Это строительные блоки в функциональном программировании. Функция
