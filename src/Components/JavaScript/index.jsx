@@ -299,7 +299,7 @@ const JavaScript = () => {
           Жизненный цикл события (всплытие и погружение)
         </h3>
         <p className="text-base font-medium text-zinc-600">
-          Фаза погружения - фаза цели - фаза всплытия
+          Фаза погружения - Фаза цели - Фаза всплытия
         </p>
         <p className="text-base font-medium text-zinc-600 mt-2">
           Погружение или перехват - триггер обработчиков при погружении события
@@ -327,6 +327,10 @@ const JavaScript = () => {
           Всплытие и погружение являются основой для «делегирования событий» –
           очень мощного приёма обработки событий.
         </p>
+      </div>
+      <div className="py-3">
+        <h3 className="text-xl font-bold text-zinc-700">Event loop</h3>
+        <p className="text-base font-medium text-zinc-600"></p>
       </div>
     </div>
   );
