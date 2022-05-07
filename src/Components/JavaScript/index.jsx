@@ -7,6 +7,8 @@ const JavaScript = () => {
   // ссылки
   // лямбда функции
   // localStorage, sessions, cookies
+  // прототипы
+
   return (
     <div className="javascript">
       <h1 className="text-3xl font-bold text-rose-700">Hello, JavaScript!</h1>
