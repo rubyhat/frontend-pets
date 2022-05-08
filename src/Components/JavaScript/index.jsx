@@ -1,3 +1,5 @@
+import eventLoop from "./img/event-loop.png";
+
 const JavaScript = () => {
   // callbacks & callbacks hell
   // event loop
@@ -332,7 +334,20 @@ const JavaScript = () => {
       </div>
       <div className="py-3">
         <h3 className="text-xl font-bold text-zinc-700">Event loop</h3>
-        <p className="text-base font-medium text-zinc-600"></p>
+        <p className="text-base font-medium text-zinc-600">
+          Существует бесконечный цикл, в котором движок JavaScript ожидает
+          задачи, исполняет их и снова ожидает появления новых. Код каждой
+          HTML-страницы в браузере выполняется в <strong>Main Thread</strong>.
+        </p>
+        <p className="text-base font-medium text-zinc-600 mt-2">
+          <strong>Main Thread</strong> — это основной поток, где браузер
+          выполняет JS, делает перерисовки, обрабатывает пользовательские
+          действия и многое другое. По сути, это то место, где движок JS
+          интегрирован в браузер.
+        </p>
+      </div>
+      <div className="py-3">
+        <img style={{ width: "800px" }} src={eventLoop} alt="event-loop" />
       </div>
     </div>
   );
