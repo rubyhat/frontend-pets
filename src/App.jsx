@@ -7,6 +7,7 @@ import GithubFindUser from "./Components/GithubFindUser";
 import DD from "./Components/DD";
 import Algorithms from "./Components/Algorithms";
 import JavaScript from "./Components/JavaScript";
+import FormValidation from "./Components/FormValidation";
 
 function App() {
   const createHistory = require("history").createBrowserHistory;
@@ -42,6 +43,11 @@ function App() {
               <Route exact path="/algorithms" element={<Algorithms />} />
               <Route exact path="/javascript" element={<JavaScript />} />
               <Route exact path="/snake-game" element={<SnakeGame />} />
+              <Route
+                exact
+                path="/native-form-validation"
+                element={<FormValidation />}
+              />
               <Route
                 exact
                 path="/github-find-user"

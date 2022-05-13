@@ -5,7 +5,7 @@ const Home = () => {
     {
       id: 1,
       title: "Snake Game",
-      text: 'Игра "Змейка", реализованная при помощи React.',
+      text: 'Игра "Змейка", реализованная при помощи React',
       link: "/snake-game",
       order: 3,
     },
@@ -36,6 +36,13 @@ const Home = () => {
       text: "Что я знаю о native JavaScript",
       link: "/javascript",
       order: 2,
+    },
+    {
+      id: 5,
+      title: "Form validation (+custom hooks)",
+      text: "Валидация простой формы без каких-либо библиотек",
+      link: "/native-form-validation",
+      order: 6,
     },
   ];
   return (
