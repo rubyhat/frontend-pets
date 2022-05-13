@@ -31,14 +31,14 @@ const Home = () => {
       order: 1,
     },
     {
-      id: 4,
+      id: 5,
       title: "Hello, JavaScript!",
       text: "Что я знаю о native JavaScript",
       link: "/javascript",
       order: 2,
     },
     {
-      id: 5,
+      id: 6,
       title: "Form validation (+custom hooks)",
       text: "Валидация простой формы без каких-либо библиотек",
       link: "/native-form-validation",
