@@ -1,8 +1,10 @@
 import { useState } from "react";
+import useValidation from "./useValidation";
 
-const useInput = (initialValue) => {
+const useInput = (initialValue, validations) => {
   const [value, setValue] = useState(initialValue);
-  const [isDrity, setIsDirty] = useState(false);
+  const [isDirty, setIsDirty] = useState(false);
+  const valid = useValidation(value, validations);
 
   const onChange = (event) => {
     const value = event.target.value;
@@ -16,6 +18,8 @@ const useInput = (initialValue) => {
     value,
     onChange,
     onBlur,
+    isDirty,
+    ...valid,
   };
 };
 
