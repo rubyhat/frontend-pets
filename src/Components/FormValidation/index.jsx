@@ -1,4 +1,5 @@
 import InputNotification from "./Components/InputNotification";
+import Input from "./Components/Input";
 import useInput from "./Hooks/useInput";
 
 const FormValidation = () => {
@@ -15,56 +16,56 @@ const FormValidation = () => {
         <div className="column is-one-third">
           <form className="form">
             <h3 className="title">Form</h3>
-            <div className="field">
-              <label className="label">Email</label>
-              <div className="control">
-                <input
-                  value={email.value}
-                  onChange={(event) => email.onChange(event)}
-                  onBlur={(event) => email.onBlur(event)}
-                  name="email"
-                  className="input"
-                  type="text"
-                  placeholder="your_email@mail.com"
+            <Input
+              type={email}
+              inputType={"email"}
+              title={"Email"}
+              placeholder={"your_email@mail.com"}
+            />
+            {email.isDirty && (
+              <div className="mb-2">
+                <InputNotification
+                  text={email.emailError.error}
+                  isValid={!email.emailError.is}
+                />
+                <InputNotification
+                  text={email.isEmpty.error}
+                  isValid={!email.isEmpty.is}
+                />
+                <InputNotification
+                  text={email.minLengthError.error}
+                  isValid={!email.minLengthError.is}
                 />
               </div>
-
-              {email.isDirty && (
-                <>
-                  <InputNotification
-                    text={email.emailError.error}
-                    isValid={!email.emailError.is}
-                  />
-                  <InputNotification
-                    text={email.isEmpty.error}
-                    isValid={!email.isEmpty.is}
-                  />
-                  <InputNotification
-                    text={email.minLengthError.error}
-                    isValid={!email.minLengthError.is}
-                  />
-                </>
-              )}
-            </div>
-            <div className="field">
-              <label className="label">Password</label>
-              <div className="control">
-                <input
-                  value={password.value}
-                  onChange={(event) => password.onChange(event)}
-                  onBlur={(event) => password.onBlur(event)}
-                  name="password"
-                  className="input"
-                  type="password"
-                  placeholder="Type your password"
+            )}
+            <Input
+              type={password}
+              inputType={"password"}
+              title={"Password"}
+              placeholder={"Type your password"}
+            />
+            {password.isDirty && (
+              <div className="mb-2">
+                <InputNotification
+                  text={password.isEmpty.error}
+                  isValid={!password.isEmpty.is}
+                />
+                <InputNotification
+                  text={password.minLengthError.error}
+                  isValid={!password.minLengthError.is}
+                />
+                <InputNotification
+                  text={password.maxLengthError.error}
+                  isValid={!password.maxLengthError.is}
                 />
               </div>
-            </div>
+            )}
             <div className="field">
               <div className="control">
                 <button
                   disabled={password.formValid || email.formValid}
                   className="button is-link"
+                  type="submit"
                 >
                   Submit
                 </button>

@@ -60,7 +60,7 @@ const useValidation = (value, validations) => {
           re.test(String(value).toLowerCase())
             ? setEmailError({
                 is: false,
-                error: "All good",
+                error: "Email is correct",
               })
             : setEmailError({
                 is: true,
@@ -71,7 +71,7 @@ const useValidation = (value, validations) => {
           break;
       }
     }
-  }, [value, validations]);
+  }, [value]);
 
   return { isEmpty, minLengthError, maxLengthError, emailError, formValid };
 };
