@@ -10,11 +10,17 @@ const FormValidation = () => {
     maxLength: 30,
   });
   const password = useInput("", { isEmpty: true, minLength: 6, maxLength: 30 });
+
+  const handleSubmitForm = (event) => {
+    event.preventDefault();
+    alert(`Fire form! Email: ${email.value} | Pass: ${password.value}`);
+  };
+
   return (
     <div className="form-validation">
       <div className="columns">
         <div className="column is-one-third">
-          <form className="form">
+          <form className="form" onSubmit={(event) => handleSubmitForm(event)}>
             <h3 className="title">Form</h3>
             <Input
               type={email}
