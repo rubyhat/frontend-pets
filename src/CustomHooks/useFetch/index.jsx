@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
+// Отправка GET запроса при помощи axios, получаем объект с данными, моментом ожидания, ошибку, время запроса в консоли.
 const useFetch = (url) => {
   const [data, setData] = useState(null),
     [isPending, setIsPending] = useState(true),

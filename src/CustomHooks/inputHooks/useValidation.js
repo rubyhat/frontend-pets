@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 
+// Передаем в хук значение и объект валидаций, затем применяем необходимые проверки.
+// Хук возвращает состояние проверки и сообщение.
 const useValidation = (value, validations) => {
   const [isEmpty, setIsEmpty] = useState(true);
   const [minLengthError, setMinLengthError] = useState(false);
