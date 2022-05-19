@@ -1,6 +1,6 @@
 import InputNotification from "./Components/InputNotification";
 import Input from "./Components/Input";
-import useInput from "./Hooks/useInput";
+import useInput from "../../CustomHooks/inputHooks/useInput";
 
 const FormValidation = () => {
   const email = useInput("", {
