@@ -1,4 +1,8 @@
+import useInput from "./hooks/useInput";
+
 const FormValidation = () => {
+  const email = useInput("");
+  const password = useInput("");
   return (
     <div className="form-validation">
       <div className="columns">
@@ -9,6 +13,9 @@ const FormValidation = () => {
               <label class="label">Email</label>
               <div class="control">
                 <input
+                  value={email.value}
+                  onChange={(event) => email.onChange(event)}
+                  onBlur={(event) => email.onBlur(event)}
                   name="email"
                   class="input"
                   type="text"
@@ -20,6 +27,9 @@ const FormValidation = () => {
               <label class="label">Password</label>
               <div class="control">
                 <input
+                  value={password.value}
+                  onChange={(event) => password.onChange(event)}
+                  onBlur={(event) => password.onBlur(event)}
                   name="password"
                   class="input"
                   type="password"
