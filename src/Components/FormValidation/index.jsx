@@ -1,4 +1,5 @@
-import useInput from "./hooks/useInput";
+import InputNotification from "./Components/InputNotification";
+import useInput from "./Hooks/useInput";
 
 const FormValidation = () => {
   const email = useInput("", {
@@ -27,17 +28,22 @@ const FormValidation = () => {
                   placeholder="your_email@mail.com"
                 />
               </div>
-              {email.isDirty && email.emailError.is && (
-                <p className="help is-danger">{email.emailError.error}</p>
-              )}
-              {email.isDirty && email.isEmpty.is && (
-                <p className="help is-danger">{email.isEmpty.error}</p>
-              )}
-              {email.isDirty && !email.isEmpty.is && (
-                <p className="help is-success">{email.isEmpty.error}</p>
-              )}
-              {email.isDirty && email.minLengthError.is && (
-                <p className="help is-danger">{email.minLengthError.error}</p>
+
+              {email.isDirty && (
+                <>
+                  <InputNotification
+                    text={email.emailError.error}
+                    isValid={!email.emailError.is}
+                  />
+                  <InputNotification
+                    text={email.isEmpty.error}
+                    isValid={!email.isEmpty.is}
+                  />
+                  <InputNotification
+                    text={email.minLengthError.error}
+                    isValid={!email.minLengthError.is}
+                  />
+                </>
               )}
             </div>
             <div className="field">
