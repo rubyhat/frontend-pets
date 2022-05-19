@@ -64,7 +64,7 @@ const Home = () => {
               className="text-zinc-700 transition hover:bg-rose-700 hover:text-white border-2 border-rose-700 rounded p-2"
               to={link.link}
             >
-              <h6 className="title font-bold">{link.title}</h6>
+              <h6 className="font-bold">{link.title}</h6>
               <p className="text">{link.text}</p>
             </Link>
           ))}
