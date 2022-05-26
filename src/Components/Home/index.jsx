@@ -44,6 +44,13 @@ const Home = () => {
       link: "/native-form-validation",
       order: 6,
     },
+    {
+      id: 7,
+      title: "Wordle Game",
+      text: "Игра со словами Wordle на React",
+      link: "/wordle-game",
+      order: 7,
+    },
   ];
   return (
     <>

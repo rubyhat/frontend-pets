@@ -7,6 +7,7 @@ import DD from "./Components/DD";
 import Algorithms from "./Components/Algorithms";
 import JavaScript from "./Components/JavaScript";
 import FormValidation from "./Components/FormValidation";
+import Wordle from "./Components/Wordle";
 
 const Router = () => {
   return (
@@ -16,6 +17,7 @@ const Router = () => {
       <Route exact path="/algorithms" element={<Algorithms />} />
       <Route exact path="/javascript" element={<JavaScript />} />
       <Route exact path="/snake-game" element={<SnakeGame />} />
+      <Route exact path="/wordle-game" element={<Wordle />} />
       <Route
         exact
         path="/native-form-validation"
