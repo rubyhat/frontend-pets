@@ -1,4 +1,5 @@
 .keypad {
+  text-align: center;
   max-width: 500px;
   margin: 20px auto;
   div {
@@ -10,5 +11,25 @@
     border-radius: 6px;
     line-height: 50px;
     text-align: center;
+    font-weight: 700;
+    transition: all 333ms ease-in;
+  }
+  .grey {
+    background-color: var(--grey);
+    border-color: var(--grey);
+    color: var(--dark);
+    opacity: 0.15;
+  }
+
+  .green {
+    background-color: var(--dark-green);
+    border-color: var(--dark-green);
+    color: white;
+  }
+
+  .yellow {
+    background-color: var(--gold);
+    border-color: var(--gold);
+    color: var(--dark);
   }
 }
