@@ -3,7 +3,7 @@ import { useState } from "react";
 const useWordle = (solution) => {
   const [turn, setTurn] = useState(0);
   const [currentGuess, setCurrentGuess] = useState("");
-  const [guesses, setGuesses] = useState([]); // each guess is an array
+  const [guesses, setGuesses] = useState([...Array(6)]); // each guess is an array
   const [history, setHistory] = useState([]); // each guess is a string
   const [isCorrect, setIsCorrect] = useState(false);
 
@@ -37,7 +37,21 @@ const useWordle = (solution) => {
   // add a new guess to the guesses state
   // update the isCorrect state if the guess is correct
   // add one to the turn state
-  const addNewGuess = () => {};
+  const addNewGuess = (formattedGuess) => {
+    if (currentGuess === solution.word) {
+      setIsCorrect(true);
+    }
+
+    setGuesses((prevGuesses) => {
+      const newGuesses = [...prevGuesses];
+      newGuesses[turn] = formattedGuess;
+      return newGuesses;
+    });
+
+    setHistory((prevHistory) => [...prevHistory, formattedGuess]);
+
+    setTurn((prevTurn) => prevTurn + 1);
+  };
 
   // handle keyup event & track current guess
   // if user presses enter, add the new guess
@@ -59,8 +73,7 @@ const useWordle = (solution) => {
         return;
       }
       const formatted = formatGuess(currentGuess);
-      console.log(formatted);
-      console.log(solution);
+      addNewGuess(formatted);
     }
     if (key === "Backspace") {
       setCurrentGuess((prev) => prev.slice(0, -1));
