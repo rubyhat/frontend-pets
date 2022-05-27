@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import WordleField from "./components/WordleField";
 
 const Wordle = () => {
   const [solution, setSolution] = useState(null);
@@ -15,7 +16,7 @@ const Wordle = () => {
     <div className="columns">
       <header className="navbar column is-full has-shadow mt-3">
         <h1 className="title is-1 has-text-centered">Wordle Game</h1>
-        {solution && <p>{solution.word}</p>}
+        {solution && <WordleField solution={solution} />}
       </header>
     </div>
   );
