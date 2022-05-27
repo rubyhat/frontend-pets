@@ -16,19 +16,63 @@
   }
 
   .grey {
-    background-color: var(--grey);
-    border-color: var(--grey);
+    --wordle-tiles-background-color: var(--grey);
+    --wordle-tiles-border-color: var(--grey);
+    --wordle-tiles-color: var(--dark);
     opacity: 0.5;
+    animation: flip 0.5s ease forwards;
   }
 
   .green {
-    background-color: var(--dark-green);
-    color: white;
-    border-color: var(--dark-green);
+    --wordle-tiles-background-color: var(--dark-green);
+    --wordle-tiles-border-color: var(--dark-green);
+    --wordle-tiles-color: white;
+    animation: flip 0.5s ease forwards;
   }
 
   .yellow {
-    background-color: var(--gold);
-    border-color: var(--gold);
+    --wordle-tiles-background-color: var(--gold);
+    --wordle-tiles-border-color: var(--gold);
+    --wordle-tiles-color: var(--dark);
+    animation: flip 0.5s ease forwards;
+  }
+}
+
+.row > div:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.row > div:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.row > div:nth-child(4) {
+  animation-delay: 0.6s;
+}
+.row > div:nth-child(5) {
+  animation-delay: 0.8s;
+}
+
+// animations
+@keyframes flip {
+  0% {
+    transform: rotateX(0deg);
+    background-color: white;
+    border-color: var(--wordle-tiles-dark);
+  }
+  45% {
+    transform: rotateX(90deg);
+    background-color: white;
+    border-color: var(--wordle-tiles-dark);
+  }
+  55% {
+    transform: rotateX(90deg);
+    background: var(--wordle-tiles-background-color);
+    border-color: var(--wordle-tiles-border-color);
+    color: var(--wordle-tiles-color);
+  }
+  100% {
+    transform: rotateX(0deg);
+    background: var(--wordle-tiles-background-color);
+    border-color: var(--wordle-tiles-border-color);
+    color: var(--wordle-tiles-color);
   }
 }
