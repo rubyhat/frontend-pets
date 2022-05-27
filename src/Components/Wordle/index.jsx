@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Keypad from "./components/Keypad";
 import WordleField from "./components/WordleField";
 
 const Wordle = () => {
@@ -12,6 +13,7 @@ const Wordle = () => {
         )
     );
   }, [setSolution]);
+
   return (
     <div className="section">
       <div className="columns">
@@ -23,6 +25,11 @@ const Wordle = () => {
       <div className="columns">
         <div className="column">
           {solution && <WordleField solution={solution} />}
+        </div>
+      </div>
+      <div className="columns">
+        <div className="column">
+          <Keypad />
         </div>
       </div>
     </div>
