@@ -13,11 +13,18 @@ const Wordle = () => {
     );
   }, [setSolution]);
   return (
-    <div className="columns">
-      <header className="navbar column is-full has-shadow mt-3">
-        <h1 className="title is-1 has-text-centered">Wordle Game</h1>
-        {solution && <WordleField solution={solution} />}
-      </header>
+    <div className="section">
+      <div className="columns">
+        <header className="navbar column is-full has-shadow mt-3">
+          <h1 className="title is-1 has-text-centered">Wordle Game</h1>
+        </header>
+      </div>
+
+      <div className="columns">
+        <div className="column">
+          {solution && <WordleField solution={solution} />}
+        </div>
+      </div>
     </div>
   );
 };
