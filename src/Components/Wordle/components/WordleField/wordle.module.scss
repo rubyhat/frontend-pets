@@ -1,0 +1,36 @@
+.game-wrap {
+  display: flex;
+  align-items: flex-start;
+  padding-top: 2rem;
+}
+
+.game {
+  padding-right: 4rem;
+}
+
+.rules-list {
+  li {
+    margin-bottom: 0.5rem;
+    display: inline-flex;
+    align-items: center;
+    &:before {
+      content: "-";
+      display: block;
+      font-weight: 700;
+      margin-right: 0.5rem;
+    }
+    span {
+      margin-right: 0.25rem;
+      font-weight: 700;
+    }
+    .green {
+      color: var(--dark-green);
+    }
+    .yellow {
+      color: var(--gold);
+    }
+    .grey {
+      opacity: 0.25;
+    }
+  }
+}
