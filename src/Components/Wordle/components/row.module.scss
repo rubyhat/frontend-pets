@@ -51,6 +51,13 @@
   animation-delay: 0.8s;
 }
 
+.row {
+  .filled {
+    animation-delay: 0s !important;
+    animation: bounce 0.2s ease-in-out forwards;
+  }
+}
+
 // animations
 @keyframes flip {
   0% {
@@ -74,5 +81,17 @@
     background: var(--wordle-tiles-background-color);
     border-color: var(--wordle-tiles-border-color);
     color: var(--wordle-tiles-color);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
   }
 }
