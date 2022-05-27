@@ -48,9 +48,9 @@ const useWordle = (solution) => {
       return newGuesses;
     });
 
-    setHistory((prevHistory) => [...prevHistory, formattedGuess]);
-
+    setHistory((prevHistory) => [...prevHistory, currentGuess]);
     setTurn((prevTurn) => prevTurn + 1);
+    setCurrentGuess("");
   };
 
   // handle keyup event & track current guess

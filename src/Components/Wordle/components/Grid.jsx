@@ -6,7 +6,7 @@ export default function Grid(props) {
   return (
     <div>
       {guesses.map((guess, index) => (
-        <Row key={index} />
+        <Row key={index} guess={guess} />
       ))}
     </div>
   );

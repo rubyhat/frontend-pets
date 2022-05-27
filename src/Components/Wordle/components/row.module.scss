@@ -14,4 +14,21 @@
     font-size: 2.5em;
     font-weight: 700;
   }
+
+  .grey {
+    background-color: var(--grey);
+    border-color: var(--grey);
+    opacity: 0.5;
+  }
+
+  .green {
+    background-color: var(--dark-green);
+    color: white;
+    border-color: var(--dark-green);
+  }
+
+  .yellow {
+    background-color: var(--gold);
+    border-color: var(--gold);
+  }
 }
